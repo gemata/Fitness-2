@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+:root{
+    --main-color:#f73471;
+    --success-color:#0073ff;
+    --error-color: #ff1900;
+
+}
+
+body {
+
+    background: url('r-2.webp');
+    background-size: cover !important;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin: 0;
+}
+
+#form {
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+
+#form h1 {
+    color: var(--main-color);
+    text-align: center;
+
+}
+#ep{
+    color: #777;
+}
+#f{
+    color: #777;
+}
+
+#signUpButton{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41,57,194);
+    border: none;
+    border-radius: 4px;
+}
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 95%;
+}
+
+
+.input-control input:focus {
+    outline: 0;
+}
+
+
+.input-control.error {
+    color: var(--error-color);
+}
+
+
+
+.input-control.error input {
+    border-color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+
+
+}
