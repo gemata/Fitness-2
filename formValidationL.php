@@ -13,21 +13,21 @@
 </head>
 <body>
     <div class="container"> 
-        <form id="form" action="/">
+        <form id="form" method="POST" action="login.php">
             <h1>Kyçuni</h1>
             <div class="input-control">
-                <label for="username" id="ep">Emri i përdoruesit</label>
-                <input id="username" name="username" type="text">
+                <label for="email" id="ep">Email</label>
+                <input id="email" name="email" type="text">
                 <div class="error"></div>
             </div>
             <div class="input-control">
                 <label for="password" id="f">Fjalëkalimi</label>
                 <input type="password" name="password" id="password">
                 <div class="error"></div>
-            <button type="submit" id="signUpButton">Hyni</button>
-        </div>
+            <button type="submit" value="submit" id="signUpButton">Hyni</button>
+         </div>
             <p></p>
-            <a href="formValidation.html">Dëshironi të regjistroheni?</a>
+            <a href="formValidation.php">Dëshironi të regjistroheni?</a>
         </form>
 
     </div>

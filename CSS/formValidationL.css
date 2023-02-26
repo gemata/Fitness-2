@@ -40,6 +40,13 @@ body {
 #f{
     color: #777;
 }
+#email{
+    text-size-adjust: 12px;
+}
+
+#password{
+    text-size-adjust: 12px;
+}
 
 #signUpButton{
     padding: 10px;

@@ -1,3 +1,10 @@
+<?php
+require  './login.php';
+
+$user = new UserLogin;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +22,7 @@
      crossorigin="anonymous"/>
 </head>
 <body>
-   <header class="header"> 
+   <header class="header">
     
 <a href="#" class="logo">Fit<span>ness</span></a>
 
@@ -23,15 +30,16 @@
 
         <a href="#" style="border-bottom: .5rem solid white; border-radius: .2rem;">Faqja Kryesore</a>
         <a href="#foot" onclick="contactScroll()" >Rreth Nesh</a>
-        <a href="workOutSection.html">Ushtrime</a>
-        <a href="dietSection.html" >Dieta</a>
+        <a href="workOutSection.php">Ushtrime</a>
+        <a href="dietSection.php" >Dieta</a>
         <a href="#foot" onclick="contactScroll()">Kontakti</a>
     </nav>
 
     <div class="icons">
 
-        <a href="formValidation.html" class="btn" >Bëhu anëtarë</a>
+        <a href="formValidation.php" class="btn" >Bëhu anëtarë</a>
         <div id="menu-btn" class="fas fa-bars"></div>
+        <a id="logout" href="logout.php" class="btn">Dilni</a>
     </div>
 
    </header>
@@ -75,63 +83,85 @@
 
    <!-- ------------------------feature sections starts----------------------------- -->
 
-<section class="feature" id="featureID">
+   <section class="feature" id="featureID">
 
-<h1 class="heading">karakteristikat e <span> klasëve</span></h1>
+<?php
+if (!isset($_SESSION["user_email"])) { // user is not logged in
+    $redirect_url = 'formValidationL.php';
+} else { // user is logged in
+    $redirect_url = 'creditcard/payment.php';
+}
+?>
+
+<h1 class="heading">Kliko oferten  <span> për tu abonuar</span></h1>
 
 <div class="swiper feature-slider">
     <div class="swiper-wrapper">
         
       
-
         <div class="swiper-slide box">
+        <a href="<?php echo $redirect_url; ?>">
             <div class="image">
                 <img src="images/p-1.webp" alt="">
             </div>
             <div class="content">
-                <div class="price"><h2>100$</h2></div>
+                <div class="price"><h2>100€</h2></div>
                 <h3>Uniclub</h3>
             </div>
+            </a>
         </div>
+    
 
         <div class="swiper-slide box">
+        <a href="<?php echo $redirect_url; ?>">
             <div class="image">
                 <img src="images/pic-3.webp" alt="">
             </div>
             <div class="content">
-                <div class="price"><h2>80$</h2></div>
+                <div class="price"><h2>80€</h2></div>
                 <h3>Dayclub</h3>
             </div>
+            </a>
         </div>
+    
+
 
         <div class="swiper-slide box">
+        <a href="<?php echo $redirect_url; ?>">
             <div class="image">
                 <img src="images/p-3.webp" alt="">
             </div>
             <div class="content">
-                <div class="price"><h2>60$</h2></div>
+                <div class="price"><h2>60€</h2></div>
                 <h3>Monthclub</h3>
             </div>
+            </a>
         </div>
 
+
         <div class="swiper-slide box">
+        <a href="<?php echo $redirect_url; ?>">
             <div class="image">
                 <img src="images/p-2.webp" alt="">
             </div>
             <div class="content">
-                <div class="price"><h2>50$</h2></div>
+                <div class="price"><h2>50€</h2></div>
                 <h3>Timeclub</h3>
             </div>
+            </a>
         </div>
 
+
         <div class="swiper-slide box">
+        <a href="<?php echo $redirect_url; ?>">
             <div class="image">
                 <img src="images/Feature-classes.webp" alt="">
             </div>
             <div class="content">
-                <div class="price"><h2>150$</h2></div>
+                <div class="price"><h2>150€</h2></div>
                 <h3>Multiclub</h3>
             </div>
+            </a>
         </div>
 
         
@@ -304,8 +334,8 @@
             <h1>Linqe Të Shpejta</h1>
             <div class="icons">
                 <a href="#">Faqja Kryesore</a>
-                <a href="dietSection.html">Dieta</a>
-                <a href="workOutSection.html">Ushtrimet</a>
+                <a href="dietSection.php">Dieta</a>
+                <a href="workOutSection.php">Ushtrimet</a>
             </div>
         </div>
     </div>
@@ -315,9 +345,8 @@
    <!-------------------------------------footer section ends here---------------------------->
 
 
-<!-- cutsom swiper script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- custom js link -->
+
     <script src="./JS/script.js"></script>
 </body>
 </html>  

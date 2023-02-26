@@ -21,17 +21,18 @@
 
     <nav class="navbar">
 
-        <a href="index.html">Faqja Kryesore</a>
+        <a href="index.php">Faqja Kryesore</a>
         <a href=#foot onclick="contactScroll()">Rreth Nesh</a>
-        <a href="workOutSection.html" style="border-bottom: .5rem solid white; border-radius: .2rem;">Ushtrime</a>
-        <a href="dietSection.html">Dieta</a>
+        <a href="workOutSection.php" style="border-bottom: .5rem solid white; border-radius: .2rem;">Ushtrime</a>
+        <a href="dietSection.php">Dieta</a>
         <a href=#foot onclick="contactScroll()">Kontakti</a>
     </nav>
 
     <div class="icons">
 
-        <a href="formValidation.html" class="btn" >Bëhu anëtarë</a>
+        <a href="formValidation.php" class="btn" >Bëhu anëtarë</a>
         <div id="menu-btn" class="fas fa-bars"></div>
+        <a id="logout" href="logout.php" class="btn">Dilni</a>
     </div>
 
    </header>
@@ -129,7 +130,7 @@
                              Koha dhe intensiteti do të varen nga karakteristikat e trupit tuaj.</p>
                     </div>
                     <div class="button">
-                    <a href="https://dynamotickets.ru/sq/osnovnye-uprazhneniya-na-nogi-v-trenazhernom-zale-programma-dlya-nog.html" class="btn">Lexo më shumë</a>
+                    <a href="https://dynamotickets.ru/sq/osnovnye-uprazhneniya-na-nogi-v-trenazhernom-zale-programma-dlya-nog.php" class="btn">Lexo më shumë</a>
                 </div>
                 </div>
                 
@@ -189,8 +190,8 @@
         <div class="box">
             <h1>Linqe Të Shpejta</h1>
             <div class="icons">
-                <a href="index.html">Faqja Kryesore</a>
-                <a href="dietSection.html">Dieta</a>
+                <a href="index.php">Faqja Kryesore</a>
+                <a href="dietSection.php">Dieta</a>
                 <a href="#">Ushtrimet</a>
             </div>
         </div>
@@ -201,9 +202,8 @@
    <!-------------------------------------footer section ends here---------------------------->
 
 
-<!-- cutsom swiper script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- custom js link -->
+
     <script src="./JS/script.js"></script>
 </body>
 </html>

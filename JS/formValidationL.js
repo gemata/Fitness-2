@@ -1,6 +1,9 @@
+
+function validateForm() {
 const form = document.getElementById('form');
-const username = document.getElementById('username');
+const email = document.getElementById('email');
 const password = document.getElementById('password');
+let isValid = true;
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -30,16 +33,16 @@ const setSuccess = element => {
 
 const validateInputs = () => {
 
-const usernameValue = username.value.trim();
+const emailValue = email.value.trim();
 const passwordValue = password.value.trim();
 
 
-if(usernameValue === '') {
-    setError(username, 'Emri i përdoruesit është i nevojshem');
+if(emailValue === '') {
+    setError(email, 'Email është i nevojshem');
 
 
 } else {
-    setSuccess(username);
+    setSuccess(email);
 
 }
 
@@ -53,3 +56,5 @@ if(passwordValue.length < 6) {
 
 
 };
+return isValid;
+}

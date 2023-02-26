@@ -153,5 +153,5 @@ var swiper = new Swiper(".blogs-slider", {
 };
 
 if (performance.navigation.type == 1) {
-    window.location.href= 'file:///C:/Users/blepo/OneDrive/Documents/GitHub/Fitness/index.html';
+    window.location.href= 'file:///C:/Users/blepo/OneDrive/Documents/GitHub/Fitness/index.php';
 };
